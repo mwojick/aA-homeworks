@@ -8,6 +8,7 @@ class AlbumsController < ApplicationController
     if @album
       render :show
     else
+      debugger
       redirect_to band_url(params[:album][:band_id])
     end
   end

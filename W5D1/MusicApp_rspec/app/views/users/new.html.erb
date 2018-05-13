@@ -3,17 +3,17 @@
   <li> <%= err %> </li>
 <% end  %>
 <% end %>
-
+<h2>New user</h2>
 
 <form action="<%= users_url %>" method="post">
   <%= auth_token %>
 
-  <label for="email">Email:</label>
+  <label for="email">Email</label>
   <input id="email" type="text" name="user[email]" value="">
 
   <br>
 
-  <label for="password">Password:</label>
+  <label for="password">Password</label>
   <input id="password" type="password" name="user[password]" value="">
 
   <input type="submit" value="Create new user">

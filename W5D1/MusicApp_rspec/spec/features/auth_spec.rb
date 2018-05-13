@@ -10,22 +10,26 @@ feature "the signup process" do
   feature "signing up a user" do
     before(:each) do
       visit new_user_url
-      fill_in 'Email', :with => "testing@email.com"
-      fill_in 'password', :with => "biscuits"
-      click_on "Create User"
+      fill_in 'Email', :with => "email"
+      fill_in 'Password', :with => "password"
+      click_on "Create new user"
     end
 
-    scenario "redirects to bands index page after signup"
+    scenario "redirects to bands index page after signup" do
+       expect(page).to have_content "All the bands"
+    end
   end
 
   feature "with an invalid user" do
     before(:each) do
       visit new_user_url
-      fill_in 'Email', :with => "testing@email.com"
-      click_on "create user"
+      fill_in 'Email', :with => "email"
+      click_on "Create new user"
     end
 
-    scenario "re-renders the signup page after failed signup"
+    scenario "re-renders the signup page after failed signup" do
+      expect(page).to have_content "Password is too short (minimum is 6 characters)"
+    end
   end
 
 end
