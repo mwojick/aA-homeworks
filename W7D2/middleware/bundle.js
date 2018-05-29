@@ -1413,7 +1413,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //   next(action);
 //   console.log(store.getState());
 // };
-//
+
+//// The actual applyMiddleware iterates in opposite direction.
+
 // const applyMiddlewares = (store, ...midwares) => {
 //   let dispatch = store.dispatch;
 //   midwares.forEach((mw)=>{

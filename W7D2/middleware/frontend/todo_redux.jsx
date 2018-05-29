@@ -22,7 +22,9 @@ import Root from './components/root';
 //   next(action);
 //   console.log(store.getState());
 // };
-//
+
+//// The actual applyMiddleware iterates in opposite direction.
+
 // const applyMiddlewares = (store, ...midwares) => {
 //   let dispatch = store.dispatch;
 //   midwares.forEach((mw)=>{
