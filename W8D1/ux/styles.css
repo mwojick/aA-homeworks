@@ -1,0 +1,11 @@
+.index-img {
+  width: 100px;
+  height: 100px;
+}
+
+.splash-img {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
